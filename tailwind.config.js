@@ -13,7 +13,10 @@ export default {
       },
       spacing: {
         '7.5': '1.875rem', 
-      }
+      },
+      backgroundImage: theme => ({
+        'icon-arrow': "url('/icon-arrow.svg')",
+      }),
     },
   },
   plugins: [],
