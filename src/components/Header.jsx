@@ -1,7 +1,7 @@
 import React from 'react'
 import patternBgMobile from '../../images/pattern-bg-mobile.png'; 
 import patternBgDesktop from '../../images/pattern-bg-desktop.png';
-import iconArrow  from '../../images/icon-arrow.svg';
+import iconArrow  from '../../public/icon-arrow.svg';
 export const Header = () => {
   return (
     <header className=' relative bg-cover bg-center bg-no-repeat  lg:pb-16 pb-32 ' style={{ 
