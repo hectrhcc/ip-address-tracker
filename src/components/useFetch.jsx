@@ -57,7 +57,7 @@ console.log('userip:', userip)
 
 
 useEffect(() =>{
-  fetch(`http://ipwho.is/${userip}`)
+  fetch(`https://ipwho.is/${userip}`)
   .then((response) =>{
     return response.json()
   })

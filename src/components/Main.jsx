@@ -15,7 +15,7 @@ export const Main = () => {
  
   
   useEffect(() => {
-    fetch(`http://ipwho.is/${ip}`)
+    fetch(`https://ipwho.is/${ip}`)
       .then((response) => {
         return response.json()
       })
