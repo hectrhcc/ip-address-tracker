@@ -1,10 +1,12 @@
 import React from 'react'
 import { useContext } from 'react';
 import { IPContext } from './IPContext';
+import { BanderaContext } from './BanderaContext';
 import {useState, useEffect} from 'react'
 
 export const Main = () => {
   const { ip } = useContext(IPContext);
+  const { bandera } = useContext(BanderaContext);
   const [datos, setDatos] = useState({  
     "ip": '',
     "success":"",
@@ -67,10 +69,9 @@ export const Main = () => {
         setDatos(dat)//JSON.stringify(dat)
     })
   },[] )
-  console.log('ip:',ip)
-  console.log('datos:',datos)
+  
 
-
+//los datos cuando la nueva ip
   useEffect(() => {
     fetch(`https://ipwho.is/${ip}`)
       .then((response) => {
@@ -79,11 +80,8 @@ export const Main = () => {
       .then((e) => {
         setDatos(e)
       })
-}, [ip])
+}, [bandera])
 
-
-
-console.log("datos", datos)
 //funciona con data. no con datos
   return (
   <main className='absolute inset-y-40 mx-4 h-72 lg:h-32 w-11/12  rounded-2xl bg-Almost-White lg:grid lg:grid-cols-4 lg:mx-14'>
