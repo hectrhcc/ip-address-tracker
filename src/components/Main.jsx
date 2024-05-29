@@ -84,11 +84,19 @@ export const Main = () => {
 
 //funciona con data. no con datos
   return (
+    <>
   <main className='absolute inset-y-40 mx-4 h-72 lg:h-32 w-11/12  rounded-2xl bg-Almost-White lg:grid lg:grid-cols-4 lg:mx-14'>
     <div className='flex flex-col justify-center items-center '><div className='font-rubik text-sm text-Medium-Gray font-bold tracking-widest mb-2 mt-8 lg:mt-0'>IP ADDRESS</div><div className='text-Almost-Black font-bold'> { datos && datos.ip}</div></div>
     <div className='flex flex-col justify-center items-center'><div className='font-rubik text-sm  text-Medium-Gray font-bold  tracking-widest mb-2 mt-4 lg:mt-0'>LOCATION</div><div className='text-Almost-Black font-bold text-center'>{datos && datos.city}, {datos && datos.region}, {datos && datos.country}</div></div>
     <div className='flex flex-col justify-center items-center'><div className='font-rubik text-sm text-Medium-Gray font-bold  tracking-widest mb-2 mt-4 lg:mt-0'>TIMEZONE</div><div className='text-Almost-Black font-bold'>UTC {datos.timezone && datos.timezone.utc}</div></div>
     <div className='flex flex-col justify-center items-center'><div className='font-rubik text-sm  text-Medium-Gray font-bold  tracking-widest mb-2 mt-4 lg:mt-0'>ISP</div><div className='text-Almost-Black font-bold text-center'>{datos.connection && datos.connection.isp}</div></div>
 </main>
+<div id="map" className='h-64'></div>
+<footer className="attribution">
+      
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://hectorcontreras.netlify.app/">Hector Contreras</a>.
+    </footer>
+</>
 )
 }
