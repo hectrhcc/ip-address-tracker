@@ -24,7 +24,7 @@ export const Header = () => {
   },[] )
   
   function handleChange(e) {
-      setIp(e.target.value);//actualiza la ip
+      setIp(e.target.value);//actualiza la ip no el objeto ip,por eso en ipCompleta se trabaja ip y no ip.ip
       ipCambio=true;
       console.log('ip nueva ', ip) //cuando es una nueva ip solo es ip no ip.ip
       }
@@ -34,8 +34,8 @@ let expreip = /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/;
 function ipCompleta(){  
   if(ipCambio==true){//cuando la ip cambia me interesa hacer la verificacion
   if(!expreip.test(ip)){ //verificar si es una ip con el formato adecuado
-    console.log("no cumple:",ip); //solo ip
-    console.log('bandera', bandera) 
+    console.log("no cumple:",ip); //solo ip porque no es el objeto ip a no ser que sea la primera vez ahi seria ip.ip
+    console.log('bandera', bandera) //pero la primera vez nunca es el caso porque el caso comienza cuando la ip cambia asi que solo es ip
 } else{
   setBandera(prev => prev+1);
   console.log('si cumple ', ip)
