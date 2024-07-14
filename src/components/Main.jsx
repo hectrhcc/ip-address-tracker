@@ -77,7 +77,7 @@ console.log("coordenadas:", mapLocation)
   const map = L.map('map').setView([mapLocation.lat, mapLocation.lng], 13);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 30,
+    maxZoom:24,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
