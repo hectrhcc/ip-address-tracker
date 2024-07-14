@@ -81,7 +81,7 @@ console.log("coordenadas:", mapLocation)
   }).addTo(map);
 
   const marker = L.marker([mapLocation.lat, mapLocation.lng]).addTo(map);
-  const circle = L.circle([mapLocation.lat, mapLocation.lng], {
+  /*const circle = L.circle([mapLocation.lat, mapLocation.lng], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -94,7 +94,7 @@ console.log("coordenadas:", mapLocation)
     [mapLocation.lat, mapLocation.lng]
   ]).addTo(map);
 
-  /*marker.bindPopup("<b>Hola</b><br>Soy un popup.").openPopup();
+  marker.bindPopup("<b>Hola</b><br>Soy un popup.").openPopup();
   circle.bindPopup("Soy un circulito :)");
   polygon.bindPopup("Soy un polygono =)");
 
