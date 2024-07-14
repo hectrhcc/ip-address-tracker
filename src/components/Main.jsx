@@ -83,9 +83,9 @@ console.log("coordenadas:", mapLocation)
 
   const customIcon = L.icon({
     iconUrl: locationIcon,
-    iconSize: [32, 48], 
-    iconAnchor: [16, 48],
-    popupAnchor: [0, -48]
+    iconSize: [22, 30], 
+    iconAnchor: [16, 30],
+    popupAnchor: [0, 30]
   });
   const marker = L.marker([mapLocation.lat, mapLocation.lng], { icon: customIcon }).addTo(map);
   /*const circle = L.circle([mapLocation.lat, mapLocation.lng], {
