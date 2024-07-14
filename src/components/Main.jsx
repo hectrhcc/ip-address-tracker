@@ -94,14 +94,14 @@ console.log("coordenadas:", mapLocation)
     [mapLocation.lat, mapLocation.lng]
   ]).addTo(map);
 
-  marker.bindPopup("<b>Hola</b><br>Soy un popup.").openPopup();
+  /*marker.bindPopup("<b>Hola</b><br>Soy un popup.").openPopup();
   circle.bindPopup("Soy un circulito :)");
   polygon.bindPopup("Soy un polygono =)");
 
   const popup = L.popup()
     .setLatLng([mapLocation.lat, mapLocation.lng])
     .setContent("esta es la zona aprox")
-    .openOn(map);
+    .openOn(map);*/
 
   function onMapClick(e) {
     alert("Hiciste click en el mapa en " + e.latlng);
