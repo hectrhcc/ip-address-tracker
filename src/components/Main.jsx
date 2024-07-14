@@ -88,7 +88,7 @@ console.log("coordenadas:", mapLocation)
     popupAnchor: [0, 30]
   });
   const marker = L.marker([mapLocation.lat, mapLocation.lng], { icon: customIcon }).addTo(map);
-  /*const circle = L.circle([mapLocation.lat, mapLocation.lng], {
+  const circle = L.circle([mapLocation.lat, mapLocation.lng], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -108,7 +108,7 @@ console.log("coordenadas:", mapLocation)
   const popup = L.popup()
     .setLatLng([mapLocation.lat, mapLocation.lng])
     .setContent("esta es la zona aprox")
-    .openOn(map);*/
+    .openOn(map);
 
   function onMapClick(e) {
     alert("Hiciste click en el mapa en " + e.latlng);
