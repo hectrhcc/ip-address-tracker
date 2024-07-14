@@ -5,7 +5,7 @@ import { BanderaContext } from './BanderaContext';
 import {useState, useEffect} from 'react'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import locationIcon from '../../images/icon-location.svg';
+import locationIcon from '../../images/icon-location.png';
 
 
 export const Main = () => {
