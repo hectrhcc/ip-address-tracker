@@ -72,20 +72,19 @@ const [mapLocation, setMapLocation] = useState({
 });
 
 console.log("coordenadas:", mapLocation)
-
  // Inicializa el mapa cuando cambia la ubicación
  useEffect(() => {
   const map = L.map('map').setView([mapLocation.lat, mapLocation.lng], 13);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+    maxZoom: 30,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
   const customIcon = L.icon({
     iconUrl: locationIcon,
-    iconSize: [32, 32], 
-    iconAnchor: [16, 32], 
+    iconSize: [24, 24], 
+    iconAnchor: [16, 16], 
     popupAnchor: [0, -32] 
   });
   const marker = L.marker([mapLocation.lat, mapLocation.lng], { icon: customIcon }).addTo(map);
